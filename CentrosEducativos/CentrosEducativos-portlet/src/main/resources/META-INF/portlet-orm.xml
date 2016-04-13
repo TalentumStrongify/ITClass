@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.CategoriaPreguntaModelImpl">
+		<attributes>
+			<id name="idcategoria" />
+			<basic name="Categoria" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.CentroEducativoModelImpl">
+		<attributes>
+			<id name="idce" />
+			<basic name="nombrece" />
+			<basic name="idca" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.ComunidadAutonomaModelImpl">
+		<attributes>
+			<id name="idca" />
+			<basic name="nombrecomunidad" />
+			<basic name="idpais" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.EvaluacionesCEModelImpl">
+		<id-class class="com.telefonica.centroseducativos.service.persistence.EvaluacionesCEPK" />
+		<attributes>
+			<id name="idencuesta" />
+			<id name="numpregunta" />
+			<basic name="notapregunta" />
+			<basic name="idce" />
+			<basic name="idrol" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.PaisModelImpl">
+		<attributes>
+			<id name="idpais" />
+			<basic name="nombrepais" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.PreguntasEncuestaModelImpl">
+		<attributes>
+			<id name="numpregunta" />
+			<basic name="enunciadopregunta" />
+			<basic name="idcategoria" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.RolUsuarioModelImpl">
+		<attributes>
+			<id name="idrol" />
+			<basic name="nombrerol" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.centroseducativos.model.impl.UsuarioModelImpl">
+		<attributes>
+			<id name="usuarioId" />
+			<basic name="cursoAcademico" />
+			<basic name="haContestadoLaEncuesta" />
+			<basic name="idrol" />
+			<basic name="idce" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.telefonica.centroseducativos.model.impl.CategoriaPreguntaImpl" name="CategoriaPregunta">
+		<table name="CentrosEducativos_CategoriaPregunta" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.centroseducativos.model.impl.CentroEducativoImpl" name="CentroEducativo">
+		<table name="CentrosEducativos_CentroEducativo" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.centroseducativos.model.impl.ComunidadAutonomaImpl" name="ComunidadAutonoma">
+		<table name="CentrosEducativos_ComunidadAutonoma" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.centroseducativos.model.impl.EvaluacionesCEImpl" name="EvaluacionesCE">
+		<table name="CentrosEducativos_EvaluacionesCE" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.centroseducativos.model.impl.PaisImpl" name="Pais">
+		<table name="CentrosEducativos_Pais" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.centroseducativos.model.impl.PreguntasEncuestaImpl" name="PreguntasEncuesta">
+		<table name="CentrosEducativos_PreguntasEncuesta" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.centroseducativos.model.impl.RolUsuarioImpl" name="RolUsuario">
+		<table name="CentrosEducativos_RolUsuario" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.centroseducativos.model.impl.UsuarioImpl" name="Usuario">
+		<table name="CentrosEducativos_Usuario" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.telefonica.centroseducativos.service.CategoriaPreguntaLocalService" class="com.telefonica.centroseducativos.service.impl.CategoriaPreguntaLocalServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.CategoriaPreguntaService" class="com.telefonica.centroseducativos.service.impl.CategoriaPreguntaServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.CategoriaPreguntaPersistence" class="com.telefonica.centroseducativos.service.persistence.CategoriaPreguntaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.centroseducativos.service.CentroEducativoLocalService" class="com.telefonica.centroseducativos.service.impl.CentroEducativoLocalServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.CentroEducativoService" class="com.telefonica.centroseducativos.service.impl.CentroEducativoServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.CentroEducativoPersistence" class="com.telefonica.centroseducativos.service.persistence.CentroEducativoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.centroseducativos.service.ComunidadAutonomaLocalService" class="com.telefonica.centroseducativos.service.impl.ComunidadAutonomaLocalServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.ComunidadAutonomaService" class="com.telefonica.centroseducativos.service.impl.ComunidadAutonomaServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.ComunidadAutonomaPersistence" class="com.telefonica.centroseducativos.service.persistence.ComunidadAutonomaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.centroseducativos.service.EvaluacionesCELocalService" class="com.telefonica.centroseducativos.service.impl.EvaluacionesCELocalServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.EvaluacionesCEService" class="com.telefonica.centroseducativos.service.impl.EvaluacionesCEServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.EvaluacionesCEPersistence" class="com.telefonica.centroseducativos.service.persistence.EvaluacionesCEPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.centroseducativos.service.PaisLocalService" class="com.telefonica.centroseducativos.service.impl.PaisLocalServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.PaisService" class="com.telefonica.centroseducativos.service.impl.PaisServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.PaisPersistence" class="com.telefonica.centroseducativos.service.persistence.PaisPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.centroseducativos.service.PreguntasEncuestaService" class="com.telefonica.centroseducativos.service.impl.PreguntasEncuestaServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.PreguntasEncuestaPersistence" class="com.telefonica.centroseducativos.service.persistence.PreguntasEncuestaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.centroseducativos.service.RolUsuarioLocalService" class="com.telefonica.centroseducativos.service.impl.RolUsuarioLocalServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.RolUsuarioService" class="com.telefonica.centroseducativos.service.impl.RolUsuarioServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.RolUsuarioPersistence" class="com.telefonica.centroseducativos.service.persistence.RolUsuarioPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.centroseducativos.service.UsuarioLocalService" class="com.telefonica.centroseducativos.service.impl.UsuarioLocalServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.UsuarioService" class="com.telefonica.centroseducativos.service.impl.UsuarioServiceImpl" />
+	<bean id="com.telefonica.centroseducativos.service.persistence.UsuarioPersistence" class="com.telefonica.centroseducativos.service.persistence.UsuarioPersistenceImpl" parent="basePersistence" />
+</beans>

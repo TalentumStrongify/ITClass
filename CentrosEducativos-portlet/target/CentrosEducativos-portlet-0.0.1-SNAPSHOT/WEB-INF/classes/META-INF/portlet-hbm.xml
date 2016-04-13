@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.telefonica.centroseducativos.model.CategoriaPregunta" />
+	<import class="com.telefonica.centroseducativos.model.CentroEducativo" />
+	<import class="com.telefonica.centroseducativos.model.ComunidadAutonoma" />
+	<import class="com.telefonica.centroseducativos.model.EvaluacionesCE" />
+	<import class="com.telefonica.centroseducativos.model.Pais" />
+	<import class="com.telefonica.centroseducativos.model.PreguntasEncuesta" />
+	<import class="com.telefonica.centroseducativos.model.RolUsuario" />
+	<import class="com.telefonica.centroseducativos.model.Usuario" />
+	<class name="com.telefonica.centroseducativos.model.impl.CategoriaPreguntaImpl" table="CentrosEducativos_CategoriaPregunta">
+		<cache usage="read-write" />
+		<id name="idcategoria" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="Categoria" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.telefonica.centroseducativos.model.impl.CentroEducativoImpl" table="CentrosEducativos_CentroEducativo">
+		<cache usage="read-write" />
+		<id name="idce" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="nombrece" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="idca" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.telefonica.centroseducativos.model.impl.ComunidadAutonomaImpl" table="CentrosEducativos_ComunidadAutonoma">
+		<cache usage="read-write" />
+		<id name="idca" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="nombrecomunidad" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="idpais" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.telefonica.centroseducativos.model.impl.EvaluacionesCEImpl" table="CentrosEducativos_EvaluacionesCE">
+		<cache usage="read-write" />
+		<composite-id name="primaryKey" class="com.telefonica.centroseducativos.service.persistence.EvaluacionesCEPK">
+			<key-property name="idencuesta" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+			<key-property name="numpregunta" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		</composite-id>
+		<property name="notapregunta" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="idce" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="idrol" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.telefonica.centroseducativos.model.impl.PaisImpl" table="CentrosEducativos_Pais">
+		<cache usage="read-write" />
+		<id name="idpais" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="nombrepais" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.telefonica.centroseducativos.model.impl.PreguntasEncuestaImpl" table="CentrosEducativos_PreguntasEncuesta">
+		<cache usage="read-write" />
+		<id name="numpregunta" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="enunciadopregunta" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="idcategoria" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.telefonica.centroseducativos.model.impl.RolUsuarioImpl" table="CentrosEducativos_RolUsuario">
+		<cache usage="read-write" />
+		<id name="idrol" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="nombrerol" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.telefonica.centroseducativos.model.impl.UsuarioImpl" table="CentrosEducativos_Usuario">
+		<cache usage="read-write" />
+		<id name="usuarioId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="cursoAcademico" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="haContestadoLaEncuesta" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="idrol" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="idce" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

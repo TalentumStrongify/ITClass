@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.telefonica.centroseducativos.model.CategoriaPregunta">
+		<field name="idcategoria" type="int" />
+		<field name="Categoria" type="String" />
+	</model>
+	<model name="com.telefonica.centroseducativos.model.CentroEducativo">
+		<field name="idce" type="int" />
+		<field name="nombrece" type="String" />
+		<field name="idca" type="int" />
+	</model>
+	<model name="com.telefonica.centroseducativos.model.ComunidadAutonoma">
+		<field name="idca" type="int" />
+		<field name="nombrecomunidad" type="String" />
+		<field name="idpais" type="int" />
+	</model>
+	<model name="com.telefonica.centroseducativos.model.EvaluacionesCE">
+		<field name="idencuesta" type="int" />
+		<field name="numpregunta" type="int" />
+		<field name="notapregunta" type="int" />
+		<field name="idce" type="int" />
+		<field name="idrol" type="int" />
+	</model>
+	<model name="com.telefonica.centroseducativos.model.Pais">
+		<field name="idpais" type="int" />
+		<field name="nombrepais" type="String" />
+	</model>
+	<model name="com.telefonica.centroseducativos.model.PreguntasEncuesta">
+		<field name="numpregunta" type="int" />
+		<field name="enunciadopregunta" type="String" />
+		<field name="idcategoria" type="long" />
+	</model>
+	<model name="com.telefonica.centroseducativos.model.RolUsuario">
+		<field name="idrol" type="int" />
+		<field name="nombrerol" type="String" />
+	</model>
+	<model name="com.telefonica.centroseducativos.model.Usuario">
+		<field name="usuarioId" type="long" />
+		<field name="cursoAcademico" type="String" />
+		<field name="haContestadoLaEncuesta" type="boolean" />
+		<field name="idrol" type="int" />
+		<field name="idce" type="int" />
+	</model>
+</model-hints>

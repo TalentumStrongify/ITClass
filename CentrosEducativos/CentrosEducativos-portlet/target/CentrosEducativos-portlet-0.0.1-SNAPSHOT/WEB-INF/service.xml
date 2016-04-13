@@ -1,0 +1,47 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.telefonica.centroseducativos">
+	<namespace>CentrosEducativos</namespace>
+    <entity local-service="true" name="ComunidadAutonoma" remote-service="true">
+        <column name="idca" primary="true" type="int" id-type="increment"></column>
+        <column name="nombrecomunidad" type="String"></column>
+        <column name="idpais" type="int"></column>
+    </entity>
+    <entity name="Pais" remote-service="true" local-service="true">
+        <column name="idpais" type="int" primary="true" id-type="increment"></column>
+        <column name="nombrepais" type="String"></column>
+    </entity>
+    <entity local-service="true" name="CategoriaPregunta">
+        <column name="idcategoria" primary="true" type="int"></column>
+        <column name="Categoria" primary="false" type="String"></column>
+    </entity>
+    <entity name="RolUsuario" local-service="true">
+        <column name="idrol" type="int" primary="true"></column>
+        <column name="nombrerol" type="String"></column>
+    </entity>
+    <entity name="CentroEducativo" local-service="true">
+        <column name="idce" type="int" primary="true" id-type="increment"></column>
+        <column name="nombrece" type="String"></column>
+        <column name="idca" type="int"></column>
+    </entity>
+    <entity name="EvaluacionesCE" local-service="true">
+        <column name="idencuesta" type="int" primary="true" id-type="increment"></column>
+        <column name="numpregunta" primary="true" type="int"></column>
+        <column name="notapregunta" type="int"></column>
+        <column name="idce" type="int"></column>
+        <column name="idrol" type="int"></column>
+    </entity>
+    <entity name="Usuario" local-service="true">
+        <column name="usuarioId" type="long" primary="true"></column>
+        <column name="cursoAcademico" type="String"></column>
+        <column name="haContestadoLaEncuesta" type="boolean"></column>
+        <column name="idrol" type="int"></column>
+        <column name="idce" type="int"></column>
+    </entity>
+    <entity name="PreguntasEncuesta" local-service="true">
+        <column name="numpregunta" type="int" primary="true"></column>
+        <column name="enunciadopregunta" type="String"></column>
+        <column name="idcategoria" type="long"></column>
+    </entity>
+    
+</service-builder>
